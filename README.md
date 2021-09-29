@@ -1,6 +1,29 @@
 # ByteArray Pool
 An utility to usage efficience ByteArray in Kotlin and Java.
 
+## Usage
+
+## Dependency
+
+### Maven
+```xml
+<dependency>
+  <groupId>org.cuongnv.bytearraypool</groupId>
+  <artifactId>bytearraypool</artifactId>
+  <version>0.0.1</version>
+</dependency>
+```
+
+### Gradle Kotlin DSL
+```kotlin
+implementation("org.cuongnv.bytearraypool:bytearraypool:0.0.1")
+
+```
+### Gradle Groovy
+```groovy
+implementation 'org.cuongnv.bytearraypool:bytearraypool:0.0.1'
+```
+
 ## License
 ```
 Copyright 2021 Cuong V. Nguyen (github.com/cuongnv126).
