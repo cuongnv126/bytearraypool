@@ -1,0 +1,7 @@
+ext {
+    PUBLISH_GROUP_ID = 'org.cuongnv.bytearraypool'
+    PUBLISH_VERSION = '0.0.1'
+    PUBLISH_ARTIFACT_ID = 'bytearraypool'
+    PUBLISH_ARTIFACT_NAME = 'ByteArray Pool'
+    GITHUB_PATH = 'github.com/cuongnv126/bytearraypool'
+}
