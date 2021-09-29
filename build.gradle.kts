@@ -1,7 +1,14 @@
 plugins {
     kotlin("jvm") version "1.5.31"
     java
+
+    id("maven-publish")
+    id("io.github.gradle-nexus.publish-plugin") version ("1.1.0")
 }
+
+apply(from = "${rootDir}/lib-publish.gradle")
+apply(from = "${rootDir}/scripts/publish-root.gradle")
+apply(from = "${rootDir}/scripts/publish-module.gradle")
 
 group = "org.cuongnv.bytearraypool"
 version = "0.0.1"

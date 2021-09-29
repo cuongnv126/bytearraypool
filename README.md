@@ -2,6 +2,40 @@
 An utility to usage efficience ByteArray in Kotlin and Java.
 
 ## Usage
+### Create byte[] from pool
+```kotlin
+// Create byte[] with size = 16KB.
+val byte16k = ByteArrayPool.getInstance().get(16 * 1024)
+byte16k.use {
+    // Do something with 16KB.
+}
+```
+### RecyclingBufferedInputStream
+```kotlin
+// Use as input stream
+val inputStream = FileInputStream("./something.txt").recyclingStream()
+inputStream.recycling { // auto recycle
+    it.stream { data, read, allRead ->
+        // Do something on sink of stream.
+        return@stream true
+    }
+}
+```
+### RecyclingBufferedOutputStream
+```kotlin
+// Similar with input stream
+val outputStream = RecyclingBufferedOutputStream(
+    ByteArrayOutputStream()
+)
+
+outputStream.use { // auto recycle and close
+    // Do something with stream
+}
+
+outputStream.recycling { // auto recycle
+    // Do something with stream
+}
+```
 
 ## Dependency
 
